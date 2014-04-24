@@ -1,9 +1,9 @@
 Set No Notification for Elgg 1.9
-Latest Version: 1.9.2
-Released: 2013-09-14
+Latest Version: 1.9.2.1
+Released: 2014-04-18
 Contact: iionly@gmx.de
 License: GNU General Public License version 2
-Copyright (c) 2012-2013 iionly (for Elgg 1.9), (c) 2010-2013 Keetup Development
+Copyright (c) 2012-2014 iionly (for Elgg 1.8+1.9), (c) 2010-2014 Keetup Development
 
 
 Elgg has the email notification setting enabled by default for new user accounts. This could result in a lot of notification emails getting sent from your server unnecessarily. Also, some users might be annoyed by receiving these emails without choosing to get them on their own.
@@ -21,6 +21,10 @@ Installation:
 
 
 Changelog:
+
+1.9.2.1:
+
+- Fixed a deprecation issue on Elgg 1.9 with 'login', 'user' event. It's now 'login:after', 'user'.
 
 1.9.2:
 
