@@ -5,11 +5,11 @@
  *
  * @author Gustavo Bellino
  * @link http://community.elgg.org/pg/profile/gushbellino
- * @copyright (c) Keetup 2010-2014
+ * @copyright (c) Keetup 2010
  * @link http://www.keetup.com/
  * @license GNU General Public License (GPL) version 2
  *
- * updated and modified for Elgg 1.8 and 1.9 by iionly
+ * updated and modified for Elgg 1.8 and newer by iionly
  * (c) iionly
  */
 
@@ -37,17 +37,20 @@ if ($vars['entity']->setNoNotif_type == 'a') {
 	$vars['entity']->setNoNotif_time = time();
 }
 
-?>
+echo "<div>" . elgg_echo('setNoNotifications:choose:type');
+echo elgg_view('input/radio', array(
+	'name' => 'params[setNoNotif_type]',
+	'value' => $vars['entity']->setNoNotif_type,
+	'options' => array(
+		elgg_echo('setNoNotifications:choose:type:a') => 'a',
+		elgg_echo('setNoNotifications:choose:type:b') => 'b'
+	),
+	'class' => 'mbs'
+));
+echo elgg_view("output/longtext", array("value" => elgg_echo('setNoNotifications:description'), "class" => "elgg-subtext")) . "</div>";
 
+echo "<div><label>" . elgg_echo('setNoNotifications:statistics') . "</label><br>";
+echo elgg_echo('setNoNotifications:enabled') . $users_count_true . ' (' . round($user_count_true_percentage, 2) . '%)' . "<br>";
+echo elgg_echo('setNoNotifications:disabled') . $users_count_false . ' (' . round($user_count_false_percentage, 2) . '%)' . "</div>";
 
-<p>
-	<?php echo elgg_echo('setNoNotifications:choose:type'); ?>
-	<?php echo elgg_view('input/radio',array('name'=>'params[setNoNotif_type]','value'=>$vars['entity']->setNoNotif_type, 'options'=>array(elgg_echo('setNoNotifications:choose:type:a')=>'a',elgg_echo('setNoNotifications:choose:type:b')=>'b')))?>
-	<br><?php echo elgg_echo('setNoNotifications:description'); ?>
-</p>
-<p>
-	<label><?php echo elgg_echo('setNoNotifications:statistics'); ?></label><br>
-	<?php echo elgg_echo('setNoNotifications:enabled') . $users_count_true . ' (' . round($user_count_true_percentage, 2) . '%)';?><br>
-	<?php echo elgg_echo('setNoNotifications:disabled') . $users_count_false . ' (' . round($user_count_false_percentage, 2) . '%)';?>
-</p>
-	<?php echo elgg_view('input/hidden',array('name'=>'params[setNoNotif_time]','value'=>$vars['entity']->setNoNotif_time));?>
+echo elgg_view('input/hidden',array('name'=>'params[setNoNotif_time]','value'=>$vars['entity']->setNoNotif_time));

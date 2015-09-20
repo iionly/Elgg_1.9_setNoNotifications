@@ -5,11 +5,11 @@
  *
  * @author Gustavo Bellino
  * @link http://community.elgg.org/pg/profile/gushbellino
- * @copyright (c) Keetup 2010-2014
+ * @copyright (c) Keetup 2010
  * @link http://www.keetup.com/
  * @license GNU General Public License (GPL) version 2
  *
- * updated and modified for Elgg 1.8 and 1.9 by iionly
+ * updated and modified for Elgg 1.8 and newer by iionly
  * (c) iionly
  */
 
