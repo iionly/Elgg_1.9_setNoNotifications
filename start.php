@@ -1,7 +1,7 @@
 <?php
 
 /**
- * setNoNotification
+ * set_no_notifications
  *
  * @author Gustavo Bellino
  * @link http://community.elgg.org/pg/profile/gushbellino
@@ -13,26 +13,26 @@
  * (c) iionly
  */
 
-// Initialise setNoNotification
-elgg_register_event_handler('init','system','setNoNotification_init');
+// Initialise set_no_notifications
+elgg_register_event_handler('init','system','set_no_notifications_init');
 
-function setNoNotification_init() {
+function set_no_notifications_init() {
 	//Event to act!
-	elgg_register_event_handler('login:after', 'user', 'setNoNotification_clear_user_meta');
+	elgg_register_event_handler('login:after', 'user', 'set_no_notifications_clear_user_meta');
 }
 
 /**
- * This function check set to no notifications the first time a user logs in
+ * This function checks and if necessary sets the email notifications to disabled the first time a user logs in
  * @param String $event
  * @param String $object_type
  * @param Object $object
  */
-function setNoNotification_clear_user_meta($event, $object_type, $object) {
+function set_no_notifications_clear_user_meta($event, $object_type, $object) {
 	// check if the user should be considered
-	if (elgg_get_plugin_setting('setNoNotif_time', 'setNoNotifications') < $object->time_created) {
+	if (elgg_get_plugin_setting('setNoNotif_time', 'set_no_notifications') < $object->time_created) {
 		if($event == 'login:after' && $object_type=='user' && $object instanceof ElggUser) {
 
-			$time = elgg_get_plugin_setting('setNoNotif_time','SetNoNotification');
+			$time = elgg_get_plugin_setting('setNoNotif_time','set_no_notifications');
 			if (!$object->set_no_notifications && $object->time_created > $time) {
 				$method = array('email'=>'no');
 				$result = false;

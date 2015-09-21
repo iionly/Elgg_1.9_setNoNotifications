@@ -2,7 +2,7 @@ Set No Notification for Elgg 1.9 - 1.12 and Elgg 2.X
 ====================================================
 
 Latest Version: 1.9.3  
-Released: 2015-09-20  
+Released: 2015-09-21  
 Contact: iionly@gmx.de  
 License: GNU General Public License version 2  
 Copyright (c) 2012 iionly (for Elgg 1.8 and newer), (c) 2010 Keetup Development
@@ -19,6 +19,6 @@ The "Set No Notification" plugin lets you turn off the email notification settin
 Installation
 ------------
 
-1. If you have a previous version of the Set No Notification plugin installed, first remove the old setNoNotification folder from your mod directory before copying/extracting the new version to your server,
-2. Copy the setNoNotification folder in the mod folder of your Elgg installation,
+1. If you have a previous version of the Set No Notification plugin installed, first remove the old plugin folder from your mod directory before copying/extracting the new version to your server,
+2. Copy the set_no_notification folder in the mod folder of your Elgg installation,
 3. Enable the plugin in the admin section of your site and configure the notification settings on the plugin settings page of the Set No Notification plugin.
