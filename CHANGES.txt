@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.3.3
+-----
+
+- Minimum Elgg version required is now Elgg 2.3.0,
+- Use ElggUser::setNotificationSetting() instead of deprecated set_user_notification_setting().
+
 1.9.3
 -----
 

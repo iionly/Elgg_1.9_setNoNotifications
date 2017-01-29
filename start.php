@@ -37,7 +37,7 @@ function set_no_notifications_clear_user_meta($event, $object_type, $object) {
 				$method = array('email'=>'no');
 				$result = false;
 				foreach ($method as $k => $v) {
-					$result = set_user_notification_setting($object['user']->guid, $k, ($v == 'yes') ? true : false);
+					$result = $object->setNotificationSetting($k, (($v == 'yes') ? true : false));
 
 					if (!$result) {
 						$object->set_no_notifications = false;
