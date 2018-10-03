@@ -3,7 +3,7 @@
 	<name>Set No Notifications</name>
 	<id>set_no_notifications</id>
 	<author>iionly (for Elgg 1.8 and newer) / Gustavo Bellino developed for Keetup Development</author>
-	<version>2.3.3</version>
+	<version>2.3.4</version>
 	<category>enhancement</category>
 	<description>This plugin disables the email notifications settings when a user logs in the first time.</description>
 	<website>https://github.com/iionly</website>

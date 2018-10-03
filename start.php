@@ -14,7 +14,7 @@
  */
 
 // Initialise set_no_notifications
-elgg_register_event_handler('init','system','set_no_notifications_init');
+elgg_register_event_handler('init', 'system', 'set_no_notifications_init');
 
 function set_no_notifications_init() {
 	//Event to act!
@@ -29,20 +29,19 @@ function set_no_notifications_init() {
  */
 function set_no_notifications_clear_user_meta($event, $object_type, $object) {
 	// check if the user should be considered
-	if (elgg_get_plugin_setting('setNoNotif_time', 'set_no_notifications') < $object->time_created) {
-		if($event == 'login:after' && $object_type=='user' && $object instanceof ElggUser) {
-
+	if($object instanceof ElggUser) {
+		if (elgg_get_plugin_setting('setNoNotif_time', 'set_no_notifications') < $object->time_created) {
 			$time = elgg_get_plugin_setting('setNoNotif_time','set_no_notifications');
 			if (!$object->set_no_notifications && $object->time_created > $time) {
-				$method = array('email'=>'no');
+				$method = ['email' => 'no'];
 				$result = false;
 				foreach ($method as $k => $v) {
 					$result = $object->setNotificationSetting($k, (($v == 'yes') ? true : false));
 
 					if (!$result) {
-						$object->set_no_notifications = false;
+						$object->set_no_notifications = (int) false;
 					} else {
-						$object->set_no_notifications = true;
+						$object->set_no_notifications = (int) true;
 					}
 				}
 			}

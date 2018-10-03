@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.3.4
+-----
+
+- Code cleanup,
+- Usage of Elgg 2.3 forms API functions.
+
 2.3.3
 -----
 
