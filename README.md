@@ -1,7 +1,7 @@
-Set No Notification for Elgg 2.3 and newer Elgg 2.X
+Set No Notification for Elgg 3.0 and newer Elgg 3.X
 ===================================================
 
-Latest Version: 2.3.4  
+Latest Version: 3.0.0  
 Released: 2018-09-19  
 Contact: iionly@gmx.de  
 License: GNU General Public License version 2  

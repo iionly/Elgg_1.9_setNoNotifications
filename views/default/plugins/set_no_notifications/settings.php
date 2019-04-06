@@ -22,7 +22,7 @@ $users_count = elgg_get_entities([
 ]);
 
 // users with set notifications disabled
-$users_count_true = elgg_get_entities_from_metadata([
+$users_count_true = elgg_get_entities([
 	'metadata_name' => 'notification:method:email',
 	'metadata_value' => true,
 	'count' => true,

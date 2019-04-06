@@ -23,11 +23,9 @@ function set_no_notifications_init() {
 
 /**
  * This function checks and if necessary sets the email notifications to disabled the first time a user logs in
- * @param String $event
- * @param String $object_type
- * @param Object $object
  */
-function set_no_notifications_clear_user_meta($event, $object_type, $object) {
+function set_no_notifications_clear_user_meta(\Elgg\Event $event) {
+	$object = $event->getObject();
 	// check if the user should be considered
 	if($object instanceof ElggUser) {
 		if (elgg_get_plugin_setting('setNoNotif_time', 'set_no_notifications') < $object->time_created) {

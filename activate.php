@@ -4,7 +4,7 @@
 // if the old version had the former plugin name / id setNoNotifications instead of the new name / id
 
 $current_version = elgg_get_plugin_setting('version', 'set_no_notifications');
-$new_version = '2.3.4';
+$new_version = '3.0.0';
 
 if (!$current_version) {
 

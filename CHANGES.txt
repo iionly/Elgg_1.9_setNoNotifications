@@ -1,6 +1,12 @@
 Changelog
 =========
 
+3.0.0
+-----
+
+- Minimum Elgg version required is now Elgg 3.0.0,
+- Updated to work on Elgg 3.
+
 2.3.4
 -----
 
